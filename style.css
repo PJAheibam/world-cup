@@ -147,9 +147,7 @@ main > .button:hover {
 
 .image-container {
   margin-top: 1rem;
-  width: 80%;
   display: flex;
-  align-self: flex-end;
 }
 .image-container img {
   width: 100%;
@@ -218,7 +216,7 @@ main > .button:hover {
 .blog-icon {
   color: var(--light-200);
 }
-.icons span {
+.content .icons span {
   font-weight: bold;
   color: var(--light-200);
   margin-right: 50px;
@@ -266,7 +264,7 @@ main > .button:hover {
 .footer hr {
   width: 100%;
   border-radius: 2px;
-  background-color: var(--dark-700);
+  border: 2px solid var(--dark-700);
   margin-block: 0.5rem;
 }
 .footer .nav-links {
@@ -306,15 +304,31 @@ main > .button:hover {
 .socials .icons {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: left;
 }
 .socials .icons .fa-brands {
   font-size: 2rem;
   color: hsla(260, 50%, 60%, 1);
   cursor: pointer;
 }
-.socials .icons .fa-brands:hover {
+.social-link:hover > .fa-brands {
   color: hsla(260, 50%, 70%, 1);
+}
+.social-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.social-link:hover > span {
+  color: var(--light);
+}
+
+.social-link span {
+  position: relative;
+  margin-left: 5px;
+  bottom: 4px;
+  color: var(--light-200);
 }
 #view-all {
   display: none;
@@ -332,6 +346,10 @@ main > .button:hover {
   }
   .header .container .content :is(p, h1) {
     text-align: left;
+  }
+  .image-container {
+    width: 80%;
+    align-self: flex-end;
   }
   .main {
     margin-inline: var(--margin-lg);
@@ -360,8 +378,12 @@ main > .button:hover {
     justify-content: center;
     margin-bottom: 1rem;
   }
+  .footer .socials h3 {
+    margin-right: 10px;
+  }
   .socials .icons {
     width: fit-content;
+    flex-direction: row;
   }
   .socials .icons .fa-brands {
     margin-left: 0.5rem;
@@ -373,6 +395,9 @@ main > .button:hover {
 @media screen and (min-width: 992px) {
   hr {
     display: none;
+  }
+  .image-container {
+    justify-content: flex-end;
   }
   .main {
     flex-direction: row;
@@ -395,7 +420,7 @@ main > .button:hover {
   }
   .footer {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .footer .logo-container {
     flex-basis: 300px;
@@ -424,7 +449,8 @@ main > .button:hover {
   }
   .footer .socials .icons {
     width: 100%;
-    justify-content: left;
+    flex-direction: column;
+    align-items: left;
   }
   .footer .socials .fa-brands {
     margin: 0;
