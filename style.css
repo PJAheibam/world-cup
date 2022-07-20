@@ -30,7 +30,7 @@
   --dark-bg: var(--dark-900);
   --dark-fg: var(--dark-800);
   --accent-color: hsla(260, 35%, 50%, 1);
-  --accent-bg-color: hsla(260, 30%, 50%, 0.3);
+  --accent-bg-color: hsla(260, 30%, 50%, 0.25);
 }
 
 * {
@@ -209,6 +209,7 @@ main > .button:hover {
   margin: 0 1rem 1rem 1rem;
 }
 .grid-item .content .title {
+  font-size: 1.3rem;
   margin-block: 0.7rem;
 }
 .grid-item .content .icons {
@@ -387,6 +388,7 @@ main > .button:hover {
   }
   .grid {
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: var(--margin-md);
   }
   #view-all {
     display: none;
