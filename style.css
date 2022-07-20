@@ -193,6 +193,10 @@ main > .button:hover {
   height: 200px;
   margin-top: 0;
   margin-bottom: 10px;
+  background-image: url(./assets/blog-image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .grid-item .image-container img {
