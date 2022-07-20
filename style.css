@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --dark: #161616;
+  --light-bg: hsla(0, 0%, 97%, 1);
+  --light-fg: hsla(0, 0%, 94%, 1);
+  --accent-color: #dd0000;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--light-bg);
+}
+.header {
+  padding: 1rem;
+}
+
+.header .container {
+  border-radius: 0.5rem;
+  padding: 1.5rem 1.3rem;
+  padding-bottom: 0;
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .container :is(p, h1) {
+  width: 100%;
+  height: fit-content;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.button {
+  display: block;
+  width: fit-content;
+  text-transform: capitalize;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  padding: 0.5em 1em;
+  margin: 0.3rem 0;
+  border: 2px solid var(--dark);
+  color: var(--dark);
+}
+.link {
+  text-decoration: none;
+}
+.active {
+  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.image-container {
+  margin-top: 1rem;
+  width: 80%;
+  display: flex;
+  align-items: flex-end;
+}
+.image-container img {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  margin: 1rem;
+  gap: 20px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-fg);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.grid-item .image-container {
+  width: 100%;
+  height: 200px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.grid-item .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item .content {
+  margin: 0 1rem 1rem 1rem;
+}
+.icons {
+  display: flex;
+}
+.icons img {
+  transform: translateY(5px);
+}
+.icons span {
+  font-weight: bold;
+  color: var(--dark);
+  margin-right: 50px;
+}
+
+footer {
+  min-height: 100px;
+  background-color: var(--dark);
+}
