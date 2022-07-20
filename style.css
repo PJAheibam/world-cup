@@ -314,11 +314,11 @@ main > .button:hover {
 }
 .socials .icons .fa-brands {
   font-size: 2rem;
-  color: hsla(260, 50%, 60%, 1);
+  color: hsla(260, 50%, 70%, 1);
   cursor: pointer;
 }
 .social-link:hover > .fa-brands {
-  color: hsla(260, 50%, 70%, 1);
+  color: hsla(260, 50%, 80%, 1);
 }
 .social-link {
   text-decoration: none;
