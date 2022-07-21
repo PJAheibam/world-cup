@@ -22,9 +22,9 @@
   --border-radius: 0.5rem;
   --light: hsla(0, 0%, 95%, 1);
   --light-200: hsla(0, 0%, 85%, 1);
-  --dark-700: hsla(260, 15%, 12%, 1);
-  --dark-800: hsla(260, 15%, 8%, 1);
-  --dark-900: hsl(260, 15%, 5%);
+  --dark-700: hsla(260, 18%, 12%, 1);
+  --dark-800: hsla(260, 18%, 8%, 1);
+  --dark-900: hsl(260, 18%, 5%);
   --light-bg: hsla(0, 0%, 97%, 1);
   --light-fg: hsla(0, 0%, 94%, 1);
   --dark-bg: var(--dark-900);
@@ -184,6 +184,7 @@ main > .button:hover {
 .grid-item {
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--dark-700);
   background-color: var(--dark-fg);
   border-radius: 0.5rem;
   overflow: hidden;
@@ -194,12 +195,13 @@ main > .button:hover {
   height: 200px;
   margin-top: 0;
   margin-bottom: 10px;
-  background-image: url(./assets/blog-image.png);
+  background-image: var(--img-src); /*dynamically setting img url*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+/* option design */
 .grid-item .image-container img {
   width: 100%;
   height: 100%;
@@ -252,7 +254,7 @@ main > .button:hover {
 .footer {
   height: fit-content;
   min-height: 100px;
-  background-color: var(--dark-fg);
+  background-color: var(--dark-700);
   display: flex;
   padding: 1rem;
   flex-direction: column;
@@ -269,7 +271,7 @@ main > .button:hover {
 .footer hr {
   width: 100%;
   border-radius: 2px;
-  border: 2px solid var(--dark-700);
+  border: 2px solid var(--dark-800);
   margin-block: 0.5rem;
 }
 .footer .nav-links {
