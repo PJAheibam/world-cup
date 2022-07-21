@@ -276,7 +276,7 @@ main > .button:hover {
   content: "";
   height: 34px;
   width: 34px;
-  top: 51.5%;
+  top: 52%;
   left: 54px;
   transform: translate(-50%, -50%);
   background-image: url(./assets/fav-icon.png);
@@ -449,7 +449,7 @@ main > .button:hover {
     flex-basis: 300px;
   }
   .logo::after {
-    top: 52%;
+    top: 53%;
     left: 147px;
   }
   .footer .nav-links {
