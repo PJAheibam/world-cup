@@ -20,8 +20,8 @@
   --margin-md: 1.5rem;
   --margin-lg: 3rem;
   --border-radius: 0.5rem;
-  --light: hsla(0, 0%, 95%, 1);
-  --light-200: hsla(0, 0%, 85%, 1);
+  --light: hsla(0, 0%, 90%, 1);
+  --light-200: hsla(0, 0%, 80%, 1);
   --dark-700: hsla(260, 18%, 12%, 1);
   --dark-800: hsla(260, 18%, 9%, 1);
   --dark-900: hsl(260, 18%, 5%);
@@ -189,23 +189,25 @@ main > .button:hover {
   border-radius: 0.5rem;
   overflow: hidden;
 }
-
 .grid-item .image-container {
   width: 100%;
   height: 200px;
   margin-top: 0;
   margin-bottom: 10px;
+  overflow: hidden;
+}
+.grid-item .image-container .image {
+  width: 100%;
+  height: 100%;
   background-image: var(--img-src); /*dynamically setting img url*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: transform 500ms ease;
 }
-
-/* option design */
-.grid-item .image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.grid-item .image-container:hover .image {
+  transform: scale(1.1);
+  transform-origin: center;
 }
 .grid-item .button {
   width: fit-content;
@@ -264,9 +266,23 @@ main > .button:hover {
   cursor: pointer;
 }
 .logo {
+  position: relative;
   font-size: 3rem;
   text-align: center;
   font-weight: 600;
+}
+.logo::after {
+  position: absolute;
+  content: "";
+  height: 34px;
+  width: 34px;
+  top: 38px;
+  left: 54px;
+  transform: translate(-50%, -50%);
+  background-image: url(./assets/fav-icon.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .footer hr {
   width: 100%;
@@ -431,6 +447,10 @@ main > .button:hover {
   }
   .footer .logo-container {
     flex-basis: 300px;
+  }
+  .logo::after {
+    top: 38px;
+    left: 147px;
   }
   .footer .nav-links {
     flex-basis: 300px;
