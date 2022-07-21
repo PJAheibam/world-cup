@@ -173,7 +173,7 @@ main > .button:hover {
 
 .grid {
   display: grid;
-  width: 100%;
+  box-sizing: content-box;
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
   margin: var(--margin-md);
